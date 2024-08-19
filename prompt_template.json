@@ -1,0 +1,138 @@
+{
+    "youtube":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for Youtube spam classification. Categories include HAM and SPAM. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the category of this youtube comment: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for Youtube spam classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for Youtube spam classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category comment on Youtube as spam or ham. Categories include spam, and ham.",
+        "mission_statement": "Write a bug-free and executable function in python to label comment on Youtube as spam or ham.",
+        "labeling_instruction": "If the comment is spam, function returns 1.\nIf the comment is ham, function returns 0.\nIf the comment cannot be determined as spam or ham, function returns -1.",
+        "function_signature": "def label_function(comment):"
+    },
+    "sms":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for SMS spam classification. Categories include ham and spam. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the category of this sms text: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for SMS spam classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for SMS spam classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category sms text as spam or ham. Categories include spam, and ham.",
+        "mission_statement": "Write a bug-free and executable function in python to label SMS text as spam or ham.",
+        "labeling_instruction": "If the text is spam, function returns 1.\nIf the comment is ham, function returns 0.\nIf the comment cannot be determined as spam or ham, function returns -1.",
+        "function_signature": "def label_function(text):"
+    },
+    "imdb":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for movie review sentiment classification. Categories include Negative and Positive. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the sentiment of this movie review: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for movie review sentiment classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for movie review sentiment classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the sentiment of movie review on IMDB as postive or negative. Categories include postive and negative.",
+        "mission_statement": "Write a bug-free and executable function in python to label the sentiment of movie review on IMDB as postive or negative",
+        "labeling_instruction": "If the movie review sounds positive, function returns 1.\nIf the movie review sounds negative, function returns 0.\nIf the movie review cannot be determined to be positive or negative, return -1.",
+        "function_signature": "def label_function(movie_review):"
+    },
+    "yelp":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for restaurant review sentiment classification. Categories include Negative and Positive. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the sentiment of this restaurant review: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for restaurant review sentiment classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for restaurant review sentiment classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the sentiment of restaurant review on Yelp as postive or negative. Categories include postive, and negative.",
+        "mission_statement": "Write a bug-free and executable function in python to label the sentiment of restaurant review on Yelp as postive or negative.",
+        "labeling_instruction": "If the restaurant review sounds positive, function returns 1.\nIf the restaurant review sounds negative, function returns 0.\nIf the restaurant review cannot be determined to be positive or negative, return -1.",
+        "function_signature": "def label_function(restaurant_review):"
+    },
+    "agnews":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for news topic classification. Categories include World, Sports, Business, and Sci/Tech. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the topic of this news: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for news topic classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for news topic classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the news topic. News topics includes world news, sport news, business news, and science/tech news.",
+        "mission_statement": "Write a bug-free and executable function in python to label the topic of news.",
+        "labeling_instruction": "If the news is categorized as world news, function returns 0.\nIf the news is categorized as sport news, function returns 1.\nIf the news is categorized as business news, function returns 2.\nIf the news is categorized as science or tech news, function returns 3.\nIf the news cannot be categorized, function returns -1.",
+        "function_signature": "def label_function(news):"
+    },
+    "medabs":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for medical abstract topic classification. Categories include neoplasms, digestive system diseases, nervous system diseases, cardiovascular diseases, and general pathological conditions. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the topic of this abstract: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for medical abstract topic classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for medical abstract topic classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the topic of medical abstract. Abstract topic includes neoplasms, digestive system diseases, nervous system diseases, cardiovascular diseases, and general pathological conditions.",
+        "mission_statement": "Write a bug-free and executable function in python to label the topic of medical abstract.",
+        "labeling_instruction": "If the abstract is about neoplasms, function returns 0.\nIf the abstract is about digestive system diseases, function returns 1.\nIf the abstract is about nervous system diseases, function returns 2.\nIf the abstract is about cardiovascular diseases, function returns 3.\nIf the abstract is about general pathological conditions, function returns 4.\nIf the abstract cannot be categorized, function returns -1.",
+        "function_signature": "def label_function(abstract):"
+    },
+    "cancer":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for biomedical document topic classification. Categories include Colon_Cancer, Lung_Cancer, and Thyroid_Cancer. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the topic of this document: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for biomedical document topic classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for biomedical document topic classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the topic of biomedical document. Document topic includes colon cancer, lung cancer, and thyroid cancer.",
+        "mission_statement": "Write a bug-free and executable function in python to label the topic of biomedical document.",
+        "labeling_instruction": "If the document is about colon cancer, function returns 0.\nIf the document is about lung cancer, function returns 1.\nIf the document is about thyroid cancer, function returns 2.\nIf the document cannot be categorized, function returns -1.",
+        "function_signature": "def label_function(document):"
+    },
+    "reddit":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for reddit topic classification. Categories include Chemistry, Biology, and Physics. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the topic of this comment: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for reddit topic classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for reddit topic classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the topic of reddit comment. Comment topic includes physics, chemistry, and biology.",
+        "mission_statement": "Write a bug-free and executable function in python to label the topic of reddit comment.",
+        "labeling_instruction": "If the document is about chemistry, function returns 0.\nIf the document is about biology, function returns 1.\nIf the document is about physics, function returns 2.\nIf the document cannot be categorized, function returns -1.",
+        "function_signature": "def label_function(reddit_comment):"
+    },
+    "french":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for book review sentiment classification. Book review is written in the French language. Categories include positive, neutral, and negative. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the sentiment of this book review: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for book review sentiment classification. Book review is written in the French language.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for book review sentiment classification. Book review is written in the French language. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the sentiment of book review written in French. Categories include postive, neutral, and negative.",
+        "mission_statement": "Write a bug-free and executable function in python to label the sentiment of book review written in French as postive, neutral, or negative.",
+        "labeling_instruction": "If the book review sounds positive, function returns 2.\nIf the movie review sounds neutral, function returns 1.\nIf the book review sounds negative, function return 0.\nIf the movie review cannot be determined to be postive, neutral, or negative, return -1.",
+        "function_signature": "def label_function(book_review):"
+    },
+    "finance":{
+        "prompting_system_prompt": "You are a helpful assistant to produce labels for financial news sentiment classification. Categories include positive, neutral, and negative. Please return answer in json format as {'class': 'your_prediction'}. Use the exact name of category and include it only.",
+        "prompting_mission_statement": "what is the sentiment of this news: [text]",
+        "llm_system_prompt": "You are a helpful assistant to provide useful information for financial news sentiment classification.",
+        "codellm_system_prompt": "You are a helpful assistant to write labeling function for financial news sentiment classification. Be creative and original. Labeling function should consider conditions globally and wisely.",
+        "prior_knowledge": "Generate [prior knowledge] to help users category the sentiment of financial news. Categories include postive, neutral, and negative.",
+        "mission_statement": "Write a bug-free and executable function in python to label the sentiment of financial news as postive, neutral, or negative.",
+        "labeling_instruction": "If the news sounds positive, function returns 2.\nIf the news sounds neutral, function returns 1.\nIf the news sounds negative, function return 0.\nIf the news cannot be determined to be postive, neutral, or negative, return -1.",
+        "function_signature": "def label_function(financial_news):"
+    },
+    "trec":{
+        "codellm_system_prompt": "",
+        "mission_statement": "",
+        "labeling_instruction": "",
+        "function_signature": ""
+    },
+    "spouse":{
+        "codellm_system_prompt": "",
+        "mission_statement": "",
+        "labeling_instruction": "",
+        "function_signature": ""
+    },
+    "cdr":{
+        "codellm_system_prompt": "",
+        "mission_statement": "",
+        "labeling_instruction": "",
+        "function_signature": ""
+    },
+    "semeval":{
+        "codellm_system_prompt": "",
+        "mission_statement": "",
+        "labeling_instruction": "",
+        "function_signature": ""
+    },
+    "chemprot":{
+        "codellm_system_prompt": "",
+        "mission_statement": "",
+        "labeling_instruction": "",
+        "function_signature": ""
+    },
+    "census":{
+        "codellm_system_prompt": "",
+        "mission_statement": "",
+        "labeling_instruction": "",
+        "function_signature": ""
+    }
+}

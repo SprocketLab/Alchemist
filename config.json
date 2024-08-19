@@ -1,0 +1,35 @@
+{
+    "dataset": {
+        "a": "youtube",
+        "b": "sms",
+        "c": "imdb",
+        "d": "yelp",
+        "e": "agnews",
+        "f": "medabs",
+        "g": "cancer",
+        "h": "reddit", 
+        "i": "french",
+        "j": "finance"
+    },
+    "mode": {
+        "a": "ScriptoriumWS",
+        "b": "Alchemist-without-RAG",
+        "c": "Alchemist-with-RAG"
+    },
+    "llm": {
+        "a": "gpt-3.5-turbo",
+        "b": "gpt-4",
+        "c": "claude-2.1",
+        "d": "claude-3-sonnet-20240229"
+    },
+    "codellm": {
+        "a": "gpt-3.5-turbo",
+        "b": "gpt-4",
+        "c": "claude-2.1",
+        "d": "claude-3-sonnet-20240229"
+    },
+    "LF_saved_dir": "/hdd1/Alchemist_Data",
+    "exp_result_saved_path": "exp_log",
+    "rag_embedding_model": "sentence-transformers/all-mpnet-base-v2",
+    "rag_external_knowledge_base": "external_knowledge"
+}
