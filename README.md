@@ -1,7 +1,7 @@
 # The Alchemist: Automated Labeling 500x CHEaper Than LLM Data Annotators
 
 Currently, three modes are supported to generate labeling programs :<br />
-1. **Plain mode**: One stage. just prompt CodeLLM.<br />
+1. **ScriptoriumWS mode**: One stage. just prompt CodeLLM.<br />
 2. **In-context learning without RAG mode**: Two Stages. Prompt LLM to generate heuristics first using prior knowledge. Use CodeLLM to generate labeling programs using these heuristics.<br /> 
 3. **In-context learning with RAG mode**: Two stages. prompt prior knowledge with links, textbooks, and wiki first then merge into query prompt to ask CodeLLM.<br />
 
@@ -20,7 +20,7 @@ Initially, you will describe your dataset and the labeling task at hand. This en
 Upon running the main, you will be prompted to provide various inputs through the terminal. Here’s what to expect:<br />
 
 - **Mode Selection**: Choose the mode that best fits your needs:<br />
-    - Plain mode
+    - ScriptoriumWS mode
     - In-context learning without RAG mode
     - In-context learning with RAG mode<br />
 
