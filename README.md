@@ -2,7 +2,7 @@
 
 Currently, three modes are supported to generate labeling programs :<br />
 1. **ScriptoriumWS mode**: One stage: LLM (your choice) is used to generate labeling functions for the given dataset.<br />
-2. **Alchemist without RAG mode**: Two Stages. Prompt LLM to generate heuristics first using prior knowledge. Use CodeLLM to generate labeling programs using these heuristics.<br /> 
+2. **Alchemist without RAG mode**: Two stages. In the first stage, it prompts a language model (such as GPT or Claude) to generate heuristics by utilizing prior knowledge along with the user's mission statement. In the second stage, it uses these generated heuristics to prompt a CodeLLM, creating labeling functions for the given dataset.<br /> 
 3. **In-context learning with RAG mode**: Two stages. prompt prior knowledge with links, textbooks, and wiki first then merge into query prompt to ask CodeLLM.<br />
 
 ### To Run the Code<br />
