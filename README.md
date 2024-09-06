@@ -24,8 +24,6 @@ Upon running the main, you will be prompted to provide various inputs through th
     - Alchemist without RAG mode
     - Alchemist with RAG mode<br />
 
-**Note** - For Plain mode, only one model will be used
-
 ### CODE Structure
 1. `main.py` : to run the code - which starts up an interactive command line and launches different modes based on user inputs
 2. `config.py` :  Manages the initial setup by capturing user inputs to configure the application accordingly. 
