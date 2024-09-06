@@ -3,7 +3,7 @@
 Currently, three modes are supported to generate labeling programs :<br />
 1. **ScriptoriumWS mode**: One stage: LLM (your choice) is used to generate labeling functions for the given dataset.<br />
 2. **Alchemist without RAG mode**: Two stages. In the first stage, it prompts a language model (such as GPT or Claude) to generate heuristics by utilizing prior knowledge along with the user's mission statement. In the second stage, it uses these generated heuristics to prompt a CodeLLM, creating labeling functions for the given dataset.<br /> 
-3. **In-context learning with RAG mode**: Two stages. prompt prior knowledge with links, textbooks, and wiki first then merge into query prompt to ask CodeLLM.<br />
+3. **Alchemist with RAG mode**: Two stages. In the first stage, it pulls relevant information from a vector store, which holds pre-embedded documents or data (related to the dataset). This knowledge is used to generate heuristics. In the second stage, the model uses those heuristics to create labeling functions with the help of CodeLLM.<br />
 
 ### To Run the Code<br />
 
@@ -21,8 +21,8 @@ Upon running the main, you will be prompted to provide various inputs through th
 
 - **Mode Selection**: Choose the mode that best fits your needs:<br />
     - ScriptoriumWS mode
-    - In-context learning without RAG mode
-    - In-context learning with RAG mode<br />
+    - Alchemist without RAG mode
+    - Alchemist with RAG mode<br />
 
 **Note** - For Plain mode, only one model will be used
 
@@ -32,7 +32,7 @@ Upon running the main, you will be prompted to provide various inputs through th
 3. `executor.py` : instantiates the corresponding mode object and initiates the execution process tailored to that mode.
 4. `modes` : contained code for different modes.
     - `base_mode.py` : parent class to all the modes
-    - `plain_mode.py`
-    - `in-context_without_RAG_mode.py`
-    - `in-context_with_RAG_mode.py`
+    - `scriptoriumws_mode.py`
+    - `alchemist_without_RAG_mode.py`
+    - `alchemist_with_RAG_mode.py`
    
