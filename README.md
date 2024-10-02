@@ -10,8 +10,10 @@ Currently, three modes are supported to generate labeling programs :<br />
 
 ### To Run the Code<br />
 
-1. Create .env file in the RAGCODE folder and add `export OPENAI_API_KEY= #your API key#`  in the file<br />
-2. Run the `python main.py` command on the terminal. This should start an interactive command line interface. <br />
+1. Create an `.env` file in the Alchemist folder and add `export OPENAI_API_KEY= <your API key>` to it.<br />
+    a. If desired, modify the `LF_saved_dir` field in `config.json` to the directory that you wish the generated labeling functions to be saved to.
+2. Run the `python main.py` command on the terminal. This should start an interactive command line interface. See the following section on user inputs.<br />
+3. Type `exit` at any time to stop execution of the program.
 
 ### User Inputs
 
@@ -20,7 +22,7 @@ Currently, three modes are supported to generate labeling programs :<br />
 Initially, you will describe your dataset and the labeling task at hand. This ensures that the generated labeling functions are aligned with your specific requirements.<br />
 
 ### Included [Code in `config.py`]<br />
-Upon running the main, you will be prompted to provide various inputs through the terminal. Here’s what to expect:<br />
+Upon running `main.py`, you will be prompted to provide various inputs through the terminal. Here’s what to expect:<br />
 
 - **Dataset Selection**: Choose the dataset that you'd like to generate labeling functions for:<br />
     - youtube (spam review classification)  
@@ -64,8 +66,8 @@ Upon running the main, you will be prompted to provide various inputs through th
 1. `main.py`: Main file used to run the code that starts up an interactive command line and launches different modes based on user inputs.
 2. `config.py`:  Manages the initial setup by capturing user inputs to configure the application accordingly. 
 3. `executor.py`: Instantiates the corresponding mode object and initiates the execution process tailored to that mode.
-4. `modes`: Directory that contains code for different modes.
-    - `base_mode.py`: Parent class to all the modes
+4. `modes`: Directory that contains code for different modes. See above for descriptions of the last three modes.
+    - `base_mode.py`: Parent class to all the modes.
     - `scriptoriumws_mode.py`
     - `alchemist_without_RAG_mode.py`
     - `alchemist_with_RAG_mode.py`
