@@ -1,4 +1,6 @@
-# The Alchemist: Automated Labeling 500x CHEaper Than LLM Data Annotators
+# The ALCHEmist: Automated Labeling 500x CHEaper Than LLM Data Annotators
+
+[![arXiv](https://img.shields.io/badge/-Paper-blue?logo=arxiv&labelColor=gray)](https://arxiv.org/abs/2407.11004) [![Project Site](https://img.shields.io/badge/🌐-Project_Site-green?labelColor=gray)](https://zihengh1.github.io/alchemist/)
 
 Large pretrained models can be used as annotators, helping replace or augment crowdworkers and enabling distilling generalist models into smaller specialist models. Unfortunately, this comes at a cost: employing top-of-the-line models often requires paying thousands of dollars for API calls, while the resulting datasets are static and challenging to audit. To address these challenges, we propose a simple alternative: rather than directly querying labels from pretrained models, we task models to generate programs that can produce labels. These programs can be stored and applied locally, re-used and extended, and cost orders of magnitude less. Our system, Alchemist, obtains comparable to or better performance than large language model-based annotation in a range of tasks for a fraction of the cost: on average, improvements amount to a 12.9% enhancement while the total labeling costs across all datasets are reduced by a factor of approximately 500x.
 
@@ -10,15 +12,15 @@ Currently, three modes are supported to generate labeling programs :<br />
 
 ### To Run the Code<br />
 
-1. Create an `.env` file in the Alchemist folder and add `export OPENAI_API_KEY= <your API key>` to it.<br />
-    a. If desired, modify the `LF_saved_dir` field in `config.json` to the directory that you wish the generated labeling functions to be saved to.
+1. Create an `.env` file in the Alchemist folder and add `export OPENAI_API_KEY= <your API key>` to it.
+    - If desired, modify the `LF_saved_dir` field in `config.json` to the directory that you wish the generated labeling functions to be saved to.
 2. Run the `python main.py` command on the terminal. This should start an interactive command line interface. See the following section on user inputs.<br />
 3. Type `exit` at any time to stop execution of the program.
 
 ### User Inputs
 
 #### To include
-1. **Dataset and the Task Description** <br />
+1. **Dataset and the Task Description**
 Initially, you will describe your dataset and the labeling task at hand. This ensures that the generated labeling functions are aligned with your specific requirements.<br />
 
 ### Included [Code in `config.py`]<br />
@@ -72,3 +74,15 @@ Upon running `main.py`, you will be prompted to provide various inputs through t
     - `alchemist_without_RAG_mode.py`
     - `alchemist_with_RAG_mode.py`
 5. `pricing.py`: Used to parse the generated labeling function files and returns the total cost by dataset, mode, mode, and heuristic mode.
+
+## Citation
+Please cite our paper if you find the repository helpful.
+```
+@inproceedings{huang2024the,
+    title={The {ALCHE}mist: Automated Labeling 500x {CHE}aper than {LLM} Data Annotators},
+    author={Tzu-Heng Huang and Catherine Cao and Vaishnavi Bhargava and Frederic Sala},
+    booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+    year={2024},
+    url={https://openreview.net/forum?id=T0glCBw28a}
+}
+```
